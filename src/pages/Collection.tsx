@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
 import WhatsAppButton from '../components/WhatsAppButton';
 import Cart from '../components/Cart';
+import type { SectionAccentColor } from '../types';
 
 export default function Collection() {
   const { id } = useParams<{ id: string }>();
@@ -112,12 +113,12 @@ export default function Collection() {
   }
 
   // Estilos basados en la categoría
-  const accentColorMap: Record<string, string> = {
+  const accentColorMap: Record<string, SectionAccentColor> = {
     'calzado': 'calzado-blush',
     'boutique': 'boutique-sand',
     'joyeria': 'atenea-lilac'
   };
-  const accentColor = accentColorMap[categoryId || 'calzado'] || 'calzado-blush';
+  const accentColor: SectionAccentColor = accentColorMap[categoryId || 'calzado'] || 'calzado-blush';
   const isJoyeria = categoryId === 'joyeria';
   const gridClass = isJoyeria
     ? 'grid grid-cols-1 md:grid-cols-3 gap-grid-gutter md:gap-lg'

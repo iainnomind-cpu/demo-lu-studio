@@ -4,7 +4,7 @@ import { supabase } from '../../lib/supabase';
 // Tallas predefinidas por categoría
 const SHOE_SIZES = ['22', '23', '24', '25', '26', '27', '28'];
 const CLOTHING_SIZES = ['XCH', 'CH', 'S', 'M', 'L', 'XL', 'XXL'];
-const PANT_SIZES = ['26', '27', '28', '29', '30', '31', '32', '34'];
+
 
 interface ProductForm {
   name: string;
